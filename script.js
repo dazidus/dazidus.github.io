@@ -3,7 +3,7 @@
 function updateTime() {
     const now = new Date();
     const timeString = now.toLocaleTimeString('en-US', { hour12: false });
-    const milliseconds = now.getMilliseconds();
+    const milliseconds = now.getMilliseconds().toString().padStart(3, '0'); // Ensures 3 digits
     document.getElementById('time').textContent = `${timeString}:${milliseconds}`;
 }
 
