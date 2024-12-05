@@ -51,7 +51,7 @@ body {
     margin-bottom: 10px;
     color: #333;
     font-family: 'Courier New', Courier, monospace; /* Monospace font for stable width */
-    width: 12ch; /* Fixed width for 12 characters (e.g., 00:00:00:000) */
+    width: 14ch; /* Fixed width for 12 characters (e.g., 00:00:00:000) */
     text-align: center; /* Center the text inside the fixed-width box */
 }
 
