@@ -10,6 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    color: white;
 }
 
 /* Background Video */
@@ -36,35 +37,56 @@ body {
 /* Info Box */
 #info-box {
     background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
+    max-width: 90%;
     z-index: 1;
 }
 
-#time, #resolution {
-    font-size: 2rem;
-    margin: 10px 0;
-    color: black;
+#time {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#resolution {
+    font-size: 1.5rem;
+    color: #666;
 }
 
 /* Fullscreen Button */
 #fullscreen-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 25px;
-    height: 25px;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
     background: url('fullscreen-icon.png') no-repeat center center;
     background-size: contain;
     border: none;
     cursor: pointer;
     z-index: 2;
-    opacity: 0.8;
+    opacity: 0.7;
     transition: opacity 0.3s;
 }
 
 #fullscreen-btn:hover {
     opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    #time {
+        font-size: 2rem;
+    }
+    #resolution {
+        font-size: 1rem;
+    }
+    #fullscreen-btn {
+        width: 25px;
+        height: 25px;
+    }
 }
