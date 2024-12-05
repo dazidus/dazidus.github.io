@@ -1,4 +1,5 @@
 // script.js
+
 function updateTime() {
     const now = new Date();
     const timeString = now.toLocaleTimeString('en-US', { hour12: false });
@@ -11,6 +12,18 @@ function updateResolution() {
     const height = window.innerHeight;
     document.getElementById('resolution').textContent = `Resolution: ${width}x${height}`;
 }
+
+// Fullscreen toggle functionality
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+fullscreenBtn.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+            console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
+        });
+    } else {
+        document.exitFullscreen();
+    }
+});
 
 // Update time and resolution periodically
 setInterval(updateTime, 10); // Update every 10ms for milliseconds accuracy
