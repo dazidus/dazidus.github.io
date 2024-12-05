@@ -19,4 +19,3 @@ window.addEventListener('resize', updateResolution);
 // Initialize on load
 updateTime();
 updateResolution();
-// JavaScript Document
