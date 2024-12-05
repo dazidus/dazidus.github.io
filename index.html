@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Pattern with SMPTE Clip</title>
-    <link rel="stylesheet" href="test-screen.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="overlay">
         <div id="time"></div>
         <div id="resolution"></div>
-        <button id="fullscreen-btn">Toggle Fullscreen</button>
+        <button id="fullscreen-btn" aria-label="Toggle Fullscreen"></button>
     </div>
     <video id="background-video" autoplay muted loop>
         <source src="smpte-test-clip.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <script src="test-screen.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -21,7 +21,9 @@ fullscreenBtn.addEventListener('click', () => {
             console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
         });
     } else {
-        document.exitFullscreen();
+        document.exitFullscreen().catch(err => {
+            console.error(`Error attempting to exit fullscreen mode: ${err.message}`);
+        });
     }
 });
 
